@@ -1,0 +1,4 @@
+github "ShootrNetwork/AwesomeCache.git" == 3.0.2
+github "Alamofire/Alamofire" ~> 4.0
+github "tristanhimmelman/AlamofireObjectMapper" ~> 2.1
+github "Haneke/HanekeSwift"

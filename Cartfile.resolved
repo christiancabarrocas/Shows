@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire" "4.0.0-beta.2"
+github "ShootrNetwork/AwesomeCache" "3.0.2"
+github "Haneke/HanekeSwift" "v0.10.1"
+github "Hearst-DD/ObjectMapper" "1.5.0"
+github "tristanhimmelman/AlamofireObjectMapper" "2.1.3"
