@@ -15,9 +15,15 @@ enum EndpointData: String {
     case Updated = "updated"
 }
 
-class Endpoints {
+enum Endpoint {
     
-    class func trending() -> String {
-        return EndpointData.Base.rawValue + EndpointData.Trending.rawValue
+    case Trending
+    
+    func url() -> URL {
+        switch self {
+        case .Trending:
+            return URL(string: EndpointData.Base.rawValue + EndpointData.Trending.rawValue)!
+        }
     }
 }
+

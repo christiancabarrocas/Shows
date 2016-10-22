@@ -31,6 +31,7 @@
 		9ECAADFC1D9DA3DA00FE666E /* ArticleListConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAADF91D9DA3DA00FE666E /* ArticleListConstructor.swift */; };
 		9ECAADFD1D9DA3DA00FE666E /* ArticleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAADFA1D9DA3DA00FE666E /* ArticleTableView.swift */; };
 		9ECAADFE1D9DA3DA00FE666E /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAADFB1D9DA3DA00FE666E /* ArticleListCell.swift */; };
+		9EF55AE11DBB6E3D00859CCC /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF55AE01DBB6E3D00859CCC /* Resource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		9ECAADF91D9DA3DA00FE666E /* ArticleListConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListConstructor.swift; sourceTree = "<group>"; };
 		9ECAADFA1D9DA3DA00FE666E /* ArticleTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableView.swift; sourceTree = "<group>"; };
 		9ECAADFB1D9DA3DA00FE666E /* ArticleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
+		9EF55AE01DBB6E3D00859CCC /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			children = (
 				9ECAADED1D9DA36E00FE666E /* Connection.swift */,
 				9E9D063B1DB94E990076EEEC /* Endpoints.swift */,
+				9EF55AE01DBB6E3D00859CCC /* Resource.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -375,9 +378,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Haneke.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AwesomeCache.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -394,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ECAADF81D9DA3D100FE666E /* ImageFilter.swift in Sources */,
+				9EF55AE11DBB6E3D00859CCC /* Resource.swift in Sources */,
 				9ECAADEE1D9DA36E00FE666E /* Connection.swift in Sources */,
 				9ECAADFD1D9DA3DA00FE666E /* ArticleTableView.swift in Sources */,
 				9ECAADF61D9DA3D100FE666E /* Identifiers.swift in Sources */,

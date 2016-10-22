@@ -10,12 +10,12 @@
 import ObjectMapper
 
 struct Show: Mappable {
-    let country:String?
-    let network:String?
-    let title:String?
-    let runtime:Double?
+    var country:String?
+    var network:String?
+    var title:String?
+    var runtime:Double?
     
-    init?(_ map: Map) {}
+    init?(map: Map) {}
     
     mutating func mapping(map: Map) {
         title <- map["title"]

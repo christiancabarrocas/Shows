@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct generalSetup {
-    let GLOBAL_TIMEOUT = 15
-}
-
-
 /* API DOCUMENTATION
 //http://docs.trakt.apiary.io/#
 

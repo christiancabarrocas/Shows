@@ -9,19 +9,27 @@
 import Alamofire
 import AlamofireObjectMapper
 
-struct Connection {
+class Connection {
     
-    func retrieve(endpoint:String, completion: (_ response:[Show]) -> Void) {
-        Alamofire.request(<#T##url: URLConvertible##URLConvertible#>, method: <#T##HTTPMethod#>, parameters: <#T##Parameters?#>, encoding: <#T##ParameterEncoding#>, headers: <#T##HTTPHeaders?#>)
-        
-        
-        
-//        Alamofire.request(.GET, endpoint).responseObject { (response:Response<NYResponse,NSError>) -> Void in
-//            let nyResponse = response.result.value
-//            if let shows = nyResponse?.results {
-//                completion(result:shows)
-//            }
-//        }
+    let headers: HTTPHeaders = [
+        "trakt-api-key": "363da5d1cd7502047597fa6ae5635811856e4618df2d28888692c5e61431cf19",
+        "Content-type": "application/json",
+        "trakt-api-version":"2"
+    ]
+    
+    let parameters: Parameters = ["X-Pagination-Item-Count": 100]
+    
+    func load<A>(resource: Resource<A>, completion: @escaping (A?) -> ()) {
+        URLSession.shared.dataTask(with: resource.url) { data, _, _ in
+            let result = data.flatMap(resource.parse)
+            completion(result)
+        }.resume()
+    }
+    
+    func get() {
+        Alamofire.request(Endpoint.Trending.url(), parameters: parameters, headers: headers).responseJSON { response in
+            print(response)
+        }
     }
 }
 
